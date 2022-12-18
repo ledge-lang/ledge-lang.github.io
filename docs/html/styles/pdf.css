@@ -1,0 +1,7 @@
+.book .book-body .page-wrapper .page-inner {
+  max-width: 90%;
+}
+
+.markdown-section table th {
+  width: 100%;
+}
