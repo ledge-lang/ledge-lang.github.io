@@ -14,6 +14,7 @@
         }
     },
     "plugins": [
+        "favicon",
 	"intopic-toc",	
 	"-lunr", 
 	"-search", 
@@ -81,7 +82,11 @@
         },
 	"hide-element":{
 	    "elements": [".gitbook-link"]
-	}
+	},
+        "favicon": {
+            "shortcut": "assets/images/favicon.ico",
+            "bookmark": "assets/images/favicon.ico"
+        }
     },
 
     "styles": {
