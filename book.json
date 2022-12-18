@@ -1,0 +1,110 @@
+{
+    "root": "./",
+    "author": "Leslie Zhu",
+    "language": "zh-hans",
+    "structure": {
+	"readme": "README.md",
+	"summary": "SUMMARY.md",
+	"glossary": "GLOSSARY.md"
+    },
+    "links":{
+        "sidebar":{
+            "首页": "https://ledge-lang.github.io/",
+            "项目Repo": "https://github.com/ledge-lang/ledge-lang"
+        }
+    },
+    "plugins": [
+	"intopic-toc",	
+	"-lunr", 
+	"-search", 
+	"search-pro", 
+	"back-to-top-button", 
+  	"chapter-fold", 
+  	"expandable-chapters-small", 
+  	"code", 
+  	"copy-code-button", 
+  	"advanced-emoji",
+  	"splitter", 
+  	"-sharing", 
+	"sharing-plus", 
+  	"tbfed-pagefooter", 
+  	"-donate",
+        "expandable-chapters-small",
+	"hide-element"
+    ],
+
+    "pluginsConfig": {
+  	"code": {
+    	    "copyButtons": true
+    	},
+    	"github": {
+            "url": "https://github.com/ledge-lang/ledge-lang.github.io"
+    	},
+    	"tbfed-pagefooter": {
+            "copyright":"Copyright &copy LeslieZhu 2022",
+            "modify_label": "该文件修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+    	},
+    	"change_girls" : {
+            "time" : 10,
+            "urls" : [
+            	"girlUrl1", "girlUrl2"
+            ]
+    	},
+    	"sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": false,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": false,
+            "qzone": false,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": false,
+            "whatsapp": false,
+            "all": [
+                "douban", "facebook", "google", "hatenaBookmark", 
+                "instapaper", "linkedin","twitter", "weibo", 
+                "messenger","qq", "qzone","viber","vk","weibo",
+                "pocket", "stumbleupon","whatsapp"
+            ]
+        },
+	"intopic-toc": {
+      	    "label": "目录"
+        },
+	"hide-element":{
+	    "elements": [".gitbook-link"]
+	}
+    },
+
+    "styles": {
+	"website": "styles/website.css",
+	"ebook": "styles/ebook.css",
+        "pdf": "styles/pdf.css",
+        "mobi": "styles/mobi.css",
+        "epub": "styles/epub.css"
+    },
+
+    "pdf": {
+        "pageNumbers": true,
+        "fontFamily": "Arial",
+        "fontSize": 12,
+        "paperSize": "a4",
+        "margin": {
+            "right": 62,
+            "left": 62,
+            "top": 56,
+            "bottom": 56
+        }
+    },
+    "variables":{
+        "byAuthor": "Leslie Zhu"
+    }
+}
