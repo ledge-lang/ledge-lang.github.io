@@ -10,7 +10,7 @@
     "links":{
         "sidebar":{
             "首页": "https://ledge-lang.github.io/",
-            "项目Repo": "https://github.com/ledge-lang/ledge-lang"
+            "GitHub": "https://github.com/ledge-lang/ledge-lang.github.io/"
         }
     },
     "plugins": [
