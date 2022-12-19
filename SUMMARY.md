@@ -1,4 +1,5 @@
-# The Ledge programming language
+# Ledge编程语言文档手册
 
-* [文档说明](README.md)
+* [说明](README.md)
 * [介绍](src/README.md)
+* [基本语法](src/basic_syntax.md)
