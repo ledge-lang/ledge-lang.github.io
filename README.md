@@ -26,6 +26,8 @@ GitBook version: 3.0.0
 $ git clone git@github.com:ledge-lang/ledge-lang.github.io.git
 $ cd ledge-lang.github.io
 
+$ /usr/local/bin/gitbook install
+
 $ /usr/local/bin/gitbook serve
 
 or
