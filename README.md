@@ -1,6 +1,7 @@
 # Ledge编程语言文档手册
 
-- 在线文档：https://ledge-lang.github.io/
+- 在线文档: http://ledge.lesliezhu.com/
+- 在线文档: https://ledge-lang.github.io/
 
 # 本地构建HTML文档
 
