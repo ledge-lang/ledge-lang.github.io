@@ -49,6 +49,33 @@ true
 12
 ```
 
+# 浮点数变量
+
+```
+>> 3.14159
+3.141590
+
+>> let a = 2 + 1.0
+3.000000
+
+>> let a = a - 1.5
+1.500000
+
+>> 10/2
+5
+
+>> 10/2.0
+5.000000
+
+>> 10/0
+Woops! Executing bytecode failed:
+ERROR: error operator: / can not div 0
+
+>> 10/0.0
+Woops! Executing bytecode failed:
+ERROR: error operator: / can not div 0.000000
+```
+
 # 字符串变量
 
 ```swift
