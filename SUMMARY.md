@@ -1,4 +1,4 @@
-# Ledge编程语言文档手册
+# 「立己」：Ledge编程语言文档手册
 
 * [说明](README.md)
 * [介绍](src/README.md)
