@@ -18,3 +18,4 @@ _book
 #
 docs/CNAME
 docs/.gitignore
+docs/Makefile
