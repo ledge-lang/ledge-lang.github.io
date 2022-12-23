@@ -25,8 +25,8 @@ $ cd ledge-lang.github.io
 $ /usr/local/bin/gitbook install
 
 $ /usr/local/bin/gitbook serve
-
-or
+$ /usr/local/bin/gitbook serve en
+$ /usr/local/bin/gitbook serve zh
 
 $ /usr/local/bin/gitbook build . docs
 $ /usr/local/bin/gitbook build en docs/en

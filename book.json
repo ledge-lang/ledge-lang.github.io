@@ -15,6 +15,7 @@
         }
     },
     "plugins": [
+        "versions-select",
         "favicon",
 	"intopic-toc",	
 	"-lunr", 
