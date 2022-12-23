@@ -47,3 +47,26 @@ if(1 < 3){
     return 20.02
 }
 ```
+
+# While循环与Continue、Break语句
+
+```cpp
+let i = 0;
+
+while(i < 10){
+    if(i == 2){
+        i = i + 1;
+        continue;
+    }
+
+    i = i + 1;
+
+    if(i == 4){
+        break;
+    }
+
+    puts(i);
+};
+
+// output: 1 and 2
+```
