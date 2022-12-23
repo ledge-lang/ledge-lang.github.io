@@ -4,9 +4,11 @@
 - Document Online: https://ledge-lang.github.io/en/index.html
 - Markdown: https://github.com/ledge-lang/ledge-lang.github.io/blob/main/SUMMARY.md
 
-`Ledge`(读音`[ledʒ]`)编程语言是一个动态语言, 源代码文件扩展名`.ll`，编译文件扩展名`.llc`, 中文名叫`「立己」`。
+# 介绍
 
-英文名来自于单词`Knowledge`，字母`K`的下一个字母是`L`，同时`Ledge`也是`Knowledge`的一部分，表示掌握知识的过程与路径。
+**`Ledge`**(读音`[ledʒ]`)编程语言是一个动态语言, 源代码文件扩展名`.ll`，编译文件扩展名`.llc`, 中文名叫`「立己」`。
+
+英文名来自于单词`Knowledge`，字母`K`的下一个字母是`L`，同时`Ledge`也是`Knowledge`的一部分，表示掌握知识的方法与过程。
 
 中文名出自成语`立己达人`:
 
