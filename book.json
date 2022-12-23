@@ -9,8 +9,7 @@
     },
     "links":{
         "sidebar":{
-            "首页": "https://ledge-lang.github.io/zh/",
-            "Home": "https://ledge-lang.github.io/en/",
+            "Home": "https://ledge-lang.github.io/",
             "GitHub": "https://github.com/ledge-lang/"
         }
     },
