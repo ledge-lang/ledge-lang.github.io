@@ -81,4 +81,3 @@ $ ./ledge run.ll
 Closure[0x600000680068]
 5
 ```
-
