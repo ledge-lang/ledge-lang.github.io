@@ -18,16 +18,30 @@
 # 运行方式
 
 ```bash
-$ ./ledge [-engine vm|eval] filename.ll
+$ ./ledge --help
+
+Usge: ledge [option] ... [file | -] [arg] ...
+
+Options and arguments (and corresponding environment variables):
+
+-B        : disable write .llc files; also LEDGEWRITEBYTECODE=x
+-engine   : 'vm' or 'eval'
+            'eval' is a ast-base interpreter
+            'vm' is a stack-base virtual machine
+
+file      : program read from script file
+-         : program read from stdin (default; interactive mode if a tty)
+arg ...   : arguments passed to program in sys.argv[1:]
+
+-version  : version info
 ```
 
-默认使用虚拟机引擎`vm`，可以选择解释器引擎`eval`，或没有源代码文件提供，则进入交互模式。
+默认使用栈式虚拟机引擎`vm`，可以选择解释器引擎`eval`，或没有源代码文件提供，则进入交互模式。
 
 # 交互模式
 
 ```bash
 $ ./ledge
-
   _                   _
  | |                 | |
  | |        ___    __| |   __ _    ___
@@ -38,9 +52,12 @@ $ ./ledge
                           |___/
 
 Hello lesliezhu! This is the Ledge programming language!
+Version 0.0.4 by https://github.com/ledge-lang/
 Feel free to type in commands, type `quit` to exit!
->> let a = 3.1415926
-3.141593
+>> let add = fn(x,y){ return x + y; }
+Closure[0x600002d98e78]
+>> add(3,4)
+7
 >> quit
 Ledge, bye!
 ```
@@ -52,32 +69,40 @@ Ledge, bye!
 ```
 let a = 3.1 + 2;
 
-puts(a);
+print(a);
 
 let fib = fn(x){
 	if(x == 0){
 		return 0;
+	} elif(x == 1){
+		return 1;
 	} else {
-		if(x == 1){
-			return 1;
-		} else {
-			return fib(x - 1) + fib(x - 2);
-		}
+		return fib(x - 1) + fib(x - 2);
 	}
 }
 
-puts(fib);
+print(fib);
 
 let b = fib(5);
 
-puts(b);
+print(b);
 ```
 
-- 运行:
+- 运行源码文件(`.ll`):
 
 ```bash
 $ ./ledge run.ll
+Done: save compiled .llc file: run.llc
 5.100000
-Closure[0x600000680068]
+Closure[0x600002324068]
+5
+```
+
+- 运行字节码编译文件(`.llc`):
+
+```bash
+$ ./ledge run.llc
+5.100000
+Closure[0x6000038280b8]
 5
 ```

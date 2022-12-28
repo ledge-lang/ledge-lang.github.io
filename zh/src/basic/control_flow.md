@@ -66,7 +66,7 @@ while(i < 10){
         break;
     }
 
-    puts(i);
+    print(i);
 };
 
 // output: 1 and 2
