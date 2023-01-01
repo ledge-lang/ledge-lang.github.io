@@ -6,8 +6,8 @@
 - Double：浮点数变量
 - String：字符串变量
 - Function：函数
-- Array：数组
-- HashMap：哈希表
+- List：数组或列表
+- Dict：哈希表或字典
 
 # Null空类型
 
@@ -106,24 +106,28 @@ Closure[0x6000019d40b8]
 ```
 
 
-# Array数组
+# List列表
 
 数组的元素可以是任何类型:
 
 ```
 >> let array = [1, "hello", true, !true, "hello" + "world"]
 [1, "hello", true, false, "helloworld"]
+>> type(array)
+"LIST"
 >> let a = array[0]
 1
 ```
 
-# HashMap字典
+# Dict字典
 
 字典的key和value可以是任何类型:
 
 ```
 >> let map = {1: "hello", "world": true, false: 3+5}
 {false: 8, 1: "hello", "world": true}
+>> type(map)
+"DICT"
 >> map[false]
 8
 >> map[9]

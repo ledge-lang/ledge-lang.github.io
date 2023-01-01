@@ -1,5 +1,6 @@
 # Builtins内置函数
 
+- type
 - isNull
 - len
 - first
@@ -8,6 +9,16 @@
 - push
 - puts
 - fibonacci
+
+# type()
+
+```
+>> type([1,2])
+"LIST"
+
+>> type(type)
+"BUILTIN"
+```
 
 # isNull()
 
