@@ -9,6 +9,7 @@
 - push
 - puts
 - fibonacci
+- delete
 
 # type()
 
@@ -37,6 +38,8 @@ true
 5
 >> len([1,2,3])
 3
+>> len("你好")
+2
 ```
 
 # first()
@@ -81,4 +84,17 @@ null
 ```
 >> fibonacci(35)
 9227465
+```
+
+# delete()
+
+```
+>> let a = 5
+5
+>> a
+5
+>> delete(a)
+>> a
+Woops! Compilation failed:
+ERROR: undefined variable a
 ```

@@ -28,6 +28,8 @@ let i = 0;
 i = 5; // OK
 
 j = 4; // error: undefiend variable j
+
+let name = "你好, Ledge!"
 ```
 
 # fn语句

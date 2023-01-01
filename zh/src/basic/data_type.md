@@ -86,11 +86,28 @@ ERROR: error operator: / can not div 0.000000
 
 # String字符串变量
 
+- 单引号或双引号定义字符串，支持转义字符:
+
 ```swift
 >> let name = "Ledge";
 "Ledge"
->> let name = "Hello " + "Ledge!";
+
+>> let name = 'Ledge'
+"Ledge"
+>> type(name)
+"STRING"
+
+>> let name = "Hello " + 'Ledge!';
 "Hello Ledge!"
+
+>> "I ❤ Ledge!"
+"I ❤ Ledge!"
+
+>> "你好，"+ "Ledge!"
+"你好，Ledge!"
+
+>> 'hello, my name is \"ledge\"'
+"hello, my name is \"ledge\""
 ```
 
 

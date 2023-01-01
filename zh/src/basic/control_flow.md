@@ -4,6 +4,8 @@
 - If语句
 - While循环语句
 - For循环语句
+- Break语句
+- Continue语句
 
 
 # Return语句
