@@ -6,7 +6,7 @@
 
 # 介绍
 
-**`Ledge`**(读音`[ledʒ]`)编程语言是一个动态语言, 源代码文件扩展名`.ll`，编译文件扩展名`.llc`, 中文名叫`「立己」`。
+**`Ledge`**(读音`[ledʒ]`)编程语言是一个动态语言, 源代码文件扩展名`.les`，编译文件扩展名`.lec`, 中文名叫`「立己」`。
 
 英文名来自于单词`Knowledge`，字母`K`的下一个字母是`L`，同时`Ledge`也是`Knowledge`的一部分，表示掌握知识的方法与过程。
 
@@ -24,7 +24,7 @@ Usge: ledge [option] ... [file | -] [arg] ...
 
 Options and arguments (and corresponding environment variables):
 
--B        : disable write .llc files; also LEDGEWRITEBYTECODE=x
+-B        : disable write .lec files; also LEDGEWRITEBYTECODE=x
 -engine   : 'vm' default
             'eval' is a ast-based interpreter
             'vm' is a stack-based virtual machine
@@ -64,7 +64,7 @@ Ledge, bye!
 
 # 批处理模式
 
-- run.ll:
+- run.les:
 
 ```
 let a = 3.1 + 2;
@@ -88,20 +88,20 @@ let b = fib(5);
 print(b);
 ```
 
-- 运行源码文件(`.ll`):
+- 运行源码文件(`.les`):
 
 ```bash
-$ ./ledge run.ll
-Done: save compiled .llc file: run.llc
+$ ./ledge run.les
+Done: save compiled .lec file: run.lec
 5.100000
 Closure[0x600002324068]
 5
 ```
 
-- 运行字节码编译文件(`.llc`):
+- 运行字节码编译文件(`.lec`):
 
 ```bash
-$ ./ledge run.llc
+$ ./ledge run.lec
 5.100000
 Closure[0x6000038280b8]
 5

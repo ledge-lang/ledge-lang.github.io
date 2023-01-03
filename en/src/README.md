@@ -1,6 +1,6 @@
 # 「立己」：Ledge编程语言
 
-`Ledge`(读音`[ledʒ]`)编程语言是一个动态语言, 源代码文件扩展名`.ll`，编译文件扩展名`.llc`, 中文名叫`「立己」`。
+`Ledge`(读音`[ledʒ]`)编程语言是一个动态语言, 源代码文件扩展名`.les`，编译文件扩展名`.lec`, 中文名叫`「立己」`。
 
 英文名来自于单词`Knowledge`，字母`K`的下一个字母是`L`，同时`Ledge`也是`Knowledge`的一部分，表示掌握知识的过程与路径。
 
@@ -12,7 +12,7 @@
 # 运行方式
 
 ```bash
-$ ./ledge [-engine vm|eval] filename.ll
+$ ./ledge [-engine vm|eval] filename.les
 ```
 
 默认使用虚拟机引擎`vm`，可以选择解释器引擎`eval`，或没有源代码文件提供，则进入交互模式。
@@ -41,7 +41,7 @@ Ledge, bye!
 
 # 批处理模式
 
-- run.ll:
+- run.les:
 
 ```
 let a = 3.1 + 2;
@@ -70,7 +70,7 @@ puts(b);
 - 运行:
 
 ```bash
-$ ./ledge run.ll
+$ ./ledge run.les
 5.100000
 Closure[0x600000680068]
 5
