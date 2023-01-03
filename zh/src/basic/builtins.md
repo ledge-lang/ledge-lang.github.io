@@ -1,6 +1,7 @@
 # Builtins内置函数
 
-- type
+- type: 查看对象类型
+- id: 查看对象id
 - isNull
 - len
 - first
@@ -9,7 +10,8 @@
 - push
 - puts
 - fibonacci
-- delete
+- delete: 删除对象
+
 
 # type()
 
@@ -19,6 +21,19 @@
 
 >> type(type)
 "BUILTIN"
+```
+
+# id()
+
+```
+>> let name = 'Ledge'
+"Ledge"
+
+>> type(name)
+"STRING"
+
+>> id(name)
+105553160290392
 ```
 
 # isNull()
