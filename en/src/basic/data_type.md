@@ -96,10 +96,10 @@ ERROR: error operator: / can not div 0.000000
 
 # Function函数
 
-`fn`关键字用于定义函数:
+`lambda`关键字用于定义匿名函数:
 
 ```
->> let add = fn(x, y){ x + y; }
+>> let add = lambda(x, y){ x + y; }
 Closure[0x6000019d40b8]
 >> add(3,4)
 7

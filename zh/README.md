@@ -25,9 +25,9 @@ Usge: ledge [option] ... [file | -] [arg] ...
 Options and arguments (and corresponding environment variables):
 
 -B        : disable write .llc files; also LEDGEWRITEBYTECODE=x
--engine   : 'vm' or 'eval'
-            'eval' is a ast-base interpreter
-            'vm' is a stack-base virtual machine
+-engine   : 'vm' default
+            'eval' is a ast-based interpreter
+            'vm' is a stack-based virtual machine
 
 file      : program read from script file
 -         : program read from stdin (default; interactive mode if a tty)
@@ -54,7 +54,7 @@ $ ./ledge
 Hello lesliezhu! This is the Ledge programming language!
 Version 0.0.4 by https://github.com/ledge-lang/
 Feel free to type in commands, type `quit` to exit!
->> let add = fn(x,y){ return x + y; }
+>> let add = lambda(x,y){ return x + y; }
 Closure[0x600002d98e78]
 >> add(3,4)
 7
@@ -71,7 +71,7 @@ let a = 3.1 + 2;
 
 print(a);
 
-let fib = fn(x){
+let fib = lambda(x){
 	if(x == 0){
 		return 0;
 	} elif(x == 1){

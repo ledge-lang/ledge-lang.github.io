@@ -48,7 +48,7 @@ let a = 3.1 + 2;
 
 puts(a);
 
-let fib = fn(x){
+let fib = lambda(x){
 	if(x == 0){
 		return 0;
 	} else {
