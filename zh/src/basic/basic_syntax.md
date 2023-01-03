@@ -32,9 +32,10 @@ j = 4; // error: undefiend variable j
 let name = "你好, Ledge!"
 ```
 
-# lambda语句
+# def与lambda语句
 
-`lambda`关键字用于定义匿名函数。
+- `def`关键字用于定义命名函数
+- `lambda`关键字用于定义匿名函数。
 
 # return语句
 

@@ -113,7 +113,16 @@ ERROR: error operator: / can not div 0.000000
 
 # Function函数
 
-`lambda`关键字用于定义匿名函数:
+- `def`关键字用于定义命名函数:
+
+```
+>> def add(x, y){ x + y; }
+Closure[0x600002ae6688]
+>> add(3,4)
+7
+```
+
+- `lambda`关键字用于定义匿名函数:
 
 ```
 >> let add = lambda(x, y){ x + y; }
