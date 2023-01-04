@@ -378,17 +378,21 @@
                                 
                                 <h1 id="builtins&#x5185;&#x7F6E;&#x51FD;&#x6570;">Builtins&#x5185;&#x7F6E;&#x51FD;&#x6570;</h1>
 <ul>
-<li>type: &#x67E5;&#x770B;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</li>
-<li>id: &#x67E5;&#x770B;&#x5BF9;&#x8C61;id</li>
-<li>isNull</li>
-<li>len</li>
-<li>first</li>
-<li>last</li>
-<li>rest</li>
-<li>push</li>
-<li>puts</li>
-<li>fibonacci</li>
-<li>delete: &#x5220;&#x9664;&#x5BF9;&#x8C61;</li>
+<li>type(): &#x67E5;&#x770B;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;</li>
+<li>id(): &#x67E5;&#x770B;&#x5BF9;&#x8C61;id</li>
+<li>print(): &#x6253;&#x5370;&#x5BF9;&#x8C61;</li>
+<li>isNull(): &#x5224;&#x65AD;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x6709;&#x6548;</li>
+<li>len(): &#x5217;&#x8868;&#x6216;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;</li>
+<li>delete(): &#x5220;&#x9664;&#x5BF9;&#x8C61;</li>
+<li>globals(): &#x5168;&#x5C40;&#x7A7A;&#x95F4;</li>
+<li><p>locals(): &#x672C;&#x5730;&#x7A7A;&#x95F4;</p>
+</li>
+<li><p>first()</p>
+</li>
+<li>last()</li>
+<li>rest()</li>
+<li>push()</li>
+<li>fibonacci()</li>
 </ul>
 <h1 id="type">type()</h1>
 <pre><code>&gt;&gt; type([1,2])
@@ -405,6 +409,11 @@
 
 &gt;&gt; id(name)
 105553160290392
+</code></pre><h1 id="print">print()</h1>
+<pre><code>&gt;&gt; print(&quot;Hello&quot;, &quot;Ledge&quot;)
+&quot;Hello&quot;
+&quot;Ledge&quot;
+null
 </code></pre><h1 id="isnull">isNull()</h1>
 <pre><code>&gt;&gt; isNull([1,2,3][1])
 false
@@ -418,6 +427,39 @@ true
 3
 &gt;&gt; len(&quot;&#x4F60;&#x597D;&quot;)
 2
+</code></pre><h1 id="delete">delete()</h1>
+<pre><code>&gt;&gt; let a = 5
+5
+&gt;&gt; a
+5
+&gt;&gt; delete(a)
+&gt;&gt; a
+Woops! Compilation failed:
+ERROR: undefined variable a
+</code></pre><h1 id="globals">globals()</h1>
+<pre><code>&gt;&gt; let a = [1,2]; let b=3.14; let c = {1:2}
+{1: 2}
+
+&gt;&gt; globals()
+{&quot;a&quot;: [1, 2], &quot;b&quot;: 3.140000, &quot;c&quot;: {1: 2}}
+</code></pre><h1 id="locals">locals()</h1>
+<pre><code>&gt;&gt; let a = [1,2]; let b=3.14; let c = {1:2}
+{1: 2}
+
+&gt;&gt; globals()
+{&quot;a&quot;: [1, 2], &quot;b&quot;: 3.140000, &quot;c&quot;: {1: 2}}
+
+&gt;&gt; locals()
+{&quot;a&quot;: [1, 2], &quot;b&quot;: 3.140000, &quot;c&quot;: {1: 2}}
+
+&gt;&gt; def test(){ let a = 100; locals()}
+Closure[0x600001658978]
+
+&gt;&gt; test()
+{&quot;a&quot;: 100}
+
+&gt;&gt; globals()
+{&quot;a&quot;: [1, 2], &quot;b&quot;: 3.140000, &quot;test&quot;: Closure[0x600001658978], &quot;c&quot;: {1: 2}}
 </code></pre><h1 id="first">first()</h1>
 <pre><code>&gt;&gt; first([1,2,3])
 1
@@ -430,25 +472,11 @@ true
 </code></pre><h1 id="push">push()</h1>
 <pre><code>&gt;&gt; push([1,2,3], 4)
 [1, 2, 3, 4]
-</code></pre><h1 id="puts">puts()</h1>
-<pre><code>&gt;&gt; puts(&quot;Hello&quot;, &quot;Ledge&quot;)
-&quot;Hello&quot;
-&quot;Ledge&quot;
-null
 </code></pre><h1 id="fibonacci">fibonacci()</h1>
 <pre><code>&gt;&gt; fibonacci(35)
 9227465
-</code></pre><h1 id="delete">delete()</h1>
-<pre><code>&gt;&gt; let a = 5
-5
-&gt;&gt; a
-5
-&gt;&gt; delete(a)
-&gt;&gt; a
-Woops! Compilation failed:
-ERROR: undefined variable a
 </code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; LeslieZhu 2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2023-01-03 16:37:52
+2023-01-04 17:59:15
 </span></footer>
                                 
                                 </section>
@@ -492,7 +520,7 @@ ERROR: undefined variable a
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"内置函数","level":"2.1.3","depth":2,"next":{"title":"参与开发","level":"3.1","depth":1,"path":"src/dev/README.md","ref":"src/dev/README.md","articles":[{"title":"开发进度","level":"3.1.1","depth":2,"path":"src/dev/dev_status.md","ref":"src/dev/dev_status.md","articles":[]},{"title":"代码风格","level":"3.1.2","depth":2,"path":"src/dev/code_format.md","ref":"src/dev/code_format.md","articles":[]}]},"previous":{"title":"流程控制","level":"2.1.2","depth":2,"path":"src/basic/control_flow.md","ref":"src/basic/control_flow.md","articles":[]},"dir":"ltr"},"config":{"plugins":["versions-select","favicon","intopic-toc","-lunr","-search","search-pro","back-to-top-button","chapter-fold","expandable-chapters-small","code","copy-code-button","advanced-emoji","splitter","-sharing","sharing-plus","tbfed-pagefooter","-donate","expandable-chapters-small","hide-element"],"root":"./","styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy LeslieZhu 2022","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/ledge-lang/ledge-lang.github.io"},"intopic-toc":{"label":"目录","isCollapsed":true,"isScrollspyActive":true,"maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"splitter":{},"change_girls":{"time":10,"urls":["girlUrl1","girlUrl2"]},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"back-to-top-button":{},"expandable-chapters-small":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["douban","facebook","google","hatenaBookmark","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","vk","weibo","pocket","stumbleupon","whatsapp"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Leslie Zhu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"byAuthor":"Leslie Zhu"},"language":"zh-hans","links":{"sidebar":{"Home":"https://ledge-lang.github.io/","GitHub":"https://github.com/ledge-lang/"}},"gitbook":"*"},"file":{"path":"src/basic/builtins.md","mtime":"2023-01-03T08:37:52.491Z","type":"markdown"},"gitbook":{"version":"3.0.0","time":"2023-01-03T08:38:14.359Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"内置函数","level":"2.1.3","depth":2,"next":{"title":"参与开发","level":"3.1","depth":1,"path":"src/dev/README.md","ref":"src/dev/README.md","articles":[{"title":"开发进度","level":"3.1.1","depth":2,"path":"src/dev/dev_status.md","ref":"src/dev/dev_status.md","articles":[]},{"title":"代码风格","level":"3.1.2","depth":2,"path":"src/dev/code_format.md","ref":"src/dev/code_format.md","articles":[]}]},"previous":{"title":"流程控制","level":"2.1.2","depth":2,"path":"src/basic/control_flow.md","ref":"src/basic/control_flow.md","articles":[]},"dir":"ltr"},"config":{"plugins":["versions-select","favicon","intopic-toc","-lunr","-search","search-pro","back-to-top-button","chapter-fold","expandable-chapters-small","code","copy-code-button","advanced-emoji","splitter","-sharing","sharing-plus","tbfed-pagefooter","-donate","expandable-chapters-small","hide-element"],"root":"./","styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy LeslieZhu 2022","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/ledge-lang/ledge-lang.github.io"},"intopic-toc":{"label":"目录","isCollapsed":true,"isScrollspyActive":true,"maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"splitter":{},"change_girls":{"time":10,"urls":["girlUrl1","girlUrl2"]},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico"},"back-to-top-button":{},"expandable-chapters-small":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["douban","facebook","google","hatenaBookmark","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","vk","weibo","pocket","stumbleupon","whatsapp"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Leslie Zhu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"byAuthor":"Leslie Zhu"},"language":"zh-hans","links":{"sidebar":{"Home":"https://ledge-lang.github.io/","GitHub":"https://github.com/ledge-lang/"}},"gitbook":"*"},"file":{"path":"src/basic/builtins.md","mtime":"2023-01-04T09:59:15.545Z","type":"markdown"},"gitbook":{"version":"3.0.0","time":"2023-01-04T09:59:50.781Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
